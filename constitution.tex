@@ -1,0 +1,320 @@
+% Copyright: (C) 2015 Drexel University Linux User Group
+% License: GPLv3 or later
+
+
+% ------- Constant Variables --------------------
+
+\newcommand{\lugname}[0]{Drexel University Linux User Group}
+\newcommand{\lugshortname}[0]{DXLUG}
+\newcommand{\luglastmodificationdate}[0]{May 20, 2015}
+
+% ----------------------------------------
+
+
+\documentclass{article}
+
+
+% ---- Define packages used -------
+
+\usepackage[margin=0.75in]{geometry}
+
+\usepackage{tabu}
+
+\usepackage{array}
+
+\usepackage{float}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{tabularx}
+
+% --------------------------------
+
+
+
+\begin{document}
+
+% Disable table position adjustment
+\restylefloat{table}
+
+
+% --------- Define a Section ----------------
+
+\newcounter{lugsectioncounter}
+\setcounter{lugsectioncounter}{1}
+
+\newcommand{\lugsection}[1]{
+  \begin{table}[H]
+    \begin{tabularx}{\linewidth}{l | X}
+      Section \arabic{lugsectioncounter} & #1
+    \end{tabularx}
+  \end{table}
+
+  \stepcounter{lugsectioncounter}
+}
+
+% ----------------------------------------------
+
+
+
+% --- Define an Article -------------
+
+\newcounter{lugarticlecounter}
+\setcounter{lugarticlecounter}{1}
+
+\newcommand{\lugarticle}[1]{
+  \centerline{\textbf{\Large{Article \Roman{lugarticlecounter}: #1}}}
+  \stepcounter{lugarticlecounter}
+  \setcounter{lugsectioncounter}{1}
+}
+
+% ----------------------------------
+
+% -- Combined article and section ------
+
+\newcommand{\lugarticlesection}[2]{
+  \noindent{%
+    \begin{minipage}[c]{\textwidth}
+      \lugarticle{#1}
+      \lugsection{#2}
+    \end{minipage}
+  }
+}
+
+% -------------------------------------
+
+
+
+% ----- Custom Title -------
+
+
+\newcommand{\lugdate}[1]{Last modified on: #1}
+
+\newcommand{\lugtitle}[1]{
+  \centerline{\textbf{\huge{#1 of the}}}
+  \vspace{5mm}
+  \centerline{\textbf{\huge{\lugname}}}
+  \vspace{5mm}
+  \centerline{\sc{\lugdate{\luglastmodificationdate}}}
+  \vspace{15mm}
+  \setcounter{lugsectioncounter}{1}
+  \setcounter{lugarticlecounter}{1}
+}
+
+
+% --------------------------
+
+
+
+
+% ---- Begin Constitution ------------
+
+\lugtitle{Constitution}
+
+
+% Article I: Name
+\lugarticlesection{Name}{The official name of this organization shall be \lugname, hereafter referred to as \lugshortname.}
+
+% Article II: Purpose
+\lugarticlesection{Purpose}{The purpose of this organization shall be to foster interest in the world's most successful free open source project. DXLUG shall provide a platform for the gathering of folk interested in topics concerning Linux and related open source initiatives. The organization shall educate users about Linux topics, provide support for Linux related issues, and unify a community of active Linux users. The organization mainly focuses on Linux, but it is open to other Unix-like platforms.}
+
+% Article III: Affiliations
+\lugarticlesection{Affiliations}{This organization is affiliated with Drexel University as a recognized student organization and as such, agrees to abide by the rules, policies, and procedures of Drexel University.}
+
+% Article IV: Membership
+\lugarticlesection{Membership}{Membership of this organization shall consist of students enrolled at Drexel University.}
+
+\lugsection{Membership in this organization shall not discriminate against any individuals regardless of race, national origin, color, religion, sex, size, gender, gender presentation, age, veteran status, sexual orientation, and/or ability.}
+
+\lugsection{Membership in this group shall be open to all who are interested and willing to foster an inclusive, safe learning environment.}
+
+\lugsection{Other classifications of faculty, staff, alumni, and community members may participate in your organization, but are not considered members, and may not vote, nor may they benefit from funding.}
+
+% Article V: Officers
+\lugarticlesection{Officers}{
+Officers of the organization shall consist of:
+
+\begin{itemize}
+
+\item{
+
+  President --- The President shall:
+
+  \begin{itemize}
+
+  \item{be responsible for representing the DXLUG as an elected representative in conferences and larger meetings}
+
+  \item{lead in the creation and maintenance of major documentation regarding organization.}
+
+  \item{attend and direct most, if not all, major meetings and events.}
+
+  \item{maintain sensitive internal records and administrate the ceding of aforementioned records to the forthcoming President.}
+
+  \item{enforce penalties against all who fail to abide by the rules set forth by the organization’s constitution and bylaws.}
+
+  \item{update the constitution and bylaws of the organization as needed.}
+
+  \end{itemize}
+
+}
+
+\item{
+
+  Vice President --- The Vice President shall:
+
+  \begin{itemize}
+
+  \item{in the absence of the President, inherit the responsibilities and powers of the President.}
+
+  \item{be responsible for overseeing the actions of Treasurer’s and Secretary’s organized events.}
+
+  \item{approve all means of advertising for the organization.}
+
+  \item{set election guidelines and and dates for nominations and elections.}
+
+  \item{during periods of transition, ensure all documents are up to date.}
+
+  \end{itemize}
+
+}
+
+\item{
+
+  Secretary --- The Secretary shall:
+
+  \begin{itemize}
+
+  \item{record meeting minutes to be made publicly available.}
+
+  \item{record scheduled events.}
+
+  \item{collaborate with the Treasurer to organize major events.}
+
+  \item{reserve rooms for meetings.}
+
+  \end{itemize}
+
+}
+
+\item{
+
+  Treasurer --- The Treasurer shall:
+
+  \begin{itemize}
+
+  \item{supervise fiscal affairs.}
+
+  \item{prepare an annual budget and submit the annual plan of activities to other officers.}
+
+  \item{collaborate with the Secretary to organize major events.}
+
+  \end{itemize}
+
+}
+
+\end{itemize}
+
+}
+
+\lugsection{The organization President and Treasurer must be full-time, enrolled students of Drexel University.}
+
+\lugsection{The qualifications for each officer shall be such that the prospective officer must have been an active member of the organization for at least six (6) months as of the start of their elected term. Additionally, the President and Vice President should have certain minimum qualifications, which will be decided by the former President and Vice President, preferably in a written examination.}
+
+\lugsection{The term of each office shall be one year, spanning four academic terms.}
+
+\lugsection{Should an officer position become vacant during their term, a re-election for that position shall occur within three (3) months following the time of vacancy. Failure to meet this condition shall result in the dissolution of the organization.}
+
+
+
+% Article VI: Advisor
+\lugarticlesection{Advisor}{The organization advisor must be a full-time member of the faculty, administration, or professional staff of Drexel University.}
+
+\lugsection{
+
+The duties and responsibilities of the advisor shall be to:
+
+\begin{enumerate}
+\item{Have basic knowledge as to the history, structure, and purpose of the organization}
+\item{Be aware of the group’s finances and budget, as your approval may be needed for financial transactions
+Provide useful guidance to help the student organization identify and attain its goals}
+\item{Be knowledgeable of University policies and regulations and civic ordinances, as well as state and federal laws that affect the activity of the organization}
+\item{Maintain ongoing contact with club officers.}
+\end{enumerate}
+
+}
+
+\lugsection{Should the advisor position become vacant during the year, a new advisor shall be selected within three (3) months following the time of vacancy. Failure to meet this condition will result in the dissolution of the organization.}
+
+% Article VII: Meetings
+\lugarticlesection{Meetings}{Regular meetings of the organization shall be held at least 4 times per academic term. Meeting dates shall be decided in advance at the beginning of the term by the Secretary. Failure to do so will result in a talk with the Advisor explaining the reason for inactivity.}
+
+\lugsection{Special meetings of the organization shall be held at least twice during the course of each academic term. Special meetings are to be convoked by the organization President. Summons shall be conveyed a week in advance of the time of meeting. These meetings shall serve to determine the future aspirations of the organization and to consolidate organization activity since the last special meeting.}
+
+\lugsection{For the transaction of business and voting, a quorum must be obtained.  Quorum is defined as the minimum percentage of active members required to be present.  The organization requires 60\% for the transaction of business. In order for the Quorum to be defined, all the officers must mandatorily be present.}
+
+% Article VIII: Finances
+\lugarticlesection{Finances}{The finances of the organization will be maintained by the Treasurer. The organization must be financially stable, as in, it must maintain enough funding for coordinating the events specified by the Secretary for the current term at least. Failure to maintain reasonable funding would result in temporary suspension of organization activities for at most 4 weeks, after which, failure to obtain funding would result in dissolution of the organization.}
+
+% Article IX: Hazing Statement
+\lugarticlesection{Hazing Statement}{Membership should be a valuable and beneficial experience for all students. Leadership of this organization shall provide its new and current members with an experience that is positive, informative and consistent with federal, state, and local laws, and the policies and procedures of Drexel University.  Activities which detract from the goal of fostering personal and intellectual development have no place in this organization.  Hazing will not be tolerated by or of any member. It is the responsibility of the organization, its leadership and members to report hazing of any kind by members to the proper authority.}
+
+% Article X: Ammendments
+\lugarticlesection{Ammendments}{This constitution shall be amended by a vote of seventy-five (75) percent majority of the membership at any regular or special meeting. There must be the vote of at least two officers in order to perform an amendment of the constitution, where, all officers must be mandatorily present.}
+
+\lugsection{If the required conditions for amendments are met, the officers must inform all current members about organizational changes, on the same day the vote is made. Members of the organization who were not present during the vote for the amendment can rebuttal these changes if they respond within one week of the vote.}
+
+% Article XI: Dissolution
+\lugarticlesection{Dissolution}{Voluntary dissolution of the organization can occur at any time on the consent of at least two officers, which must include either the President or the Vice President. Under all circumstances, it’s safer to temporarily suspend activities of the organization for up to two (2) weeks during which appropriate measures can be taken. In order to dissolve the organization voluntarily, all members of the organization must be informed about the decision (4) weeks prior to the dissolution. The members of the organization can rebuttal and offer a solution during this period.}
+
+\lugsection{Mandatory dissolution requires more serious considerations, and can only be undone by the order of the Advisor. Mandatory dissolution can occur in circumstances mentioned above. Mandatory dissolution would likely occur if an officer/advisor position has been empty for a certain time-period, which is likely an indication of disorder in the organization. Mandatory dissolution can also be ordered by the Office of Campus Activities in circumstances of misconduct.}
+
+
+% ----- End Constitution --------
+
+
+
+
+% ------ Begin Bylaws --------
+
+\newpage
+
+\lugtitle{Bylaws}
+
+% Article I: Membership
+\lugarticlesection{Membership}{The procedure for selection of membership are as follows: Any students requesting admittance to the DXLUG shall be admitted after attending their first meeting after their request. (Needs to be revised)}
+
+\lugsection{Dues for this organization shall be immediately directed to the organization President. (if applicable) . . . (indicate amount, how often paid, etc.)}
+
+\lugsection{Minimum membership responsibilities and duties shall include sustaining life.}
+
+\lugsection{Membership shall be terminated by …}
+
+% Article II: Selection or Election of Officers
+\lugarticlesection{Selection or Election of Officers}{The selection/election of officers shall be done by …}
+
+\lugsection{The provisions for removal of an officer include …}
+
+% Article III: Selection or Election of Adivisor
+\lugarticlesection{Selection or Election of Advisor}{The selection/election of the advisor shall be done by …}
+
+\lugsection{The provisions for removal of an advisor include …}
+
+% Article IV: Committees
+\lugarticlesection{Committees}{All permanent committees shall be formed by …}
+
+\lugsection{All ad-hoc committees shall be formed by …}
+
+% Article V: Rules of Order
+\lugarticlesection{Rules of Order}{This organization shall be governed by (if applicable) …}
+
+% Article VI: Amendment
+\lugarticlesection{Amendment}{These bylaws may be amended by a vote of one presidential unit (should be similar to constitution, but tend to be easier to amend, i.e., simple majority vote, 2/3, etc.)}
+
+
+% ------ End Bylaws ------
+
+
+
+
+\end{document}
+
